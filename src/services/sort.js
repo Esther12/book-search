@@ -14,4 +14,12 @@ export const sort_by = (field, reverse, primer) => {
     return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
   }
 }
+
+export const checkNull = (a)=>{
+  if(a==undefined || a == [] || a == null || a ==0 ||a =="" || a == " "){
+    return true; //is null
+  }else{
+    return false; // not null
+  }
+}
  

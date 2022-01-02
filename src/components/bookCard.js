@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 
 const BookCard = (props) => {
-  console.log(props)
   return (
     <div>
       <div>

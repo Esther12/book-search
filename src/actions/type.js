@@ -5,3 +5,4 @@ export const RESULT_FILTER_NAME = "RESULT_FILTER_NAME";
 export const SET_RESULT = "SET_RESULT";
 export const TURN_PAGE = "TURN_PAGE";
 export const SET_PAGE="SET_PAGE";
+export const CURRENT_BOOKS = "CURRENT_BOOKS";

@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#263237 !important;
+}
 .container{
   display: flex;
   flex-direction: column;
@@ -85,7 +92,7 @@ input:focus{
   padding: 5px;
   background-color: #ffd982;
   border-radius: 5px;
-  border: 1px solid rgba(146, 146, 143, 0.705);
+  border: none !important;
   cursor: pointer;
   color:#263237;
 }

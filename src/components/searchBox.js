@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { searchBook } from "../services/api";
-import axios from "../services/axios";
 
 const SearchBox = () => {
   const [searchContent, setSearchContent] = useState("");
@@ -16,11 +15,19 @@ const SearchBox = () => {
       setMsg("Search value cannot be empty!")
     }
   }
+  const handleKeypress = e => {
+    //it triggers by pressing the enter key
+  if (e.keyCode === 13) {
+    search(e);
+  }
+};
   return (
-    <div>
-      <label htmlFor="fname">Search Book</label>
+    <div className="search-area">
+      <label htmlFor="fname">Search book title</label>
+      <div className="search-bar">
       <input type="text" id="fname" name="fname" value={searchContent} onChange={value=>{setSearchContent(value.target.value); setMsg("");}} />
-      <input type="button" value="Search" onClick={search}/>
+      <button onClick={search} onKeyPress={handleKeypress} className="btn"><span value="Search" className="material-icons-sharp" >search</span></button>
+      </div>
       {errMsg?<p className="err-message">{errMsg}</p>:null}
     </div>
   );

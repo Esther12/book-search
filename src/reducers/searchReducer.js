@@ -26,7 +26,7 @@ export default function searchReducer(state = initialState, { type, payload }) {
         sort:0,
         books: payload,
         current_page:0,
-        current_books:payload.slice(0,15)
+        current_books:payload.slice(0,20)
       };
     case RESULT_FILTER_DATE:
       let dateFille = state.books.sort(sort_by("first_publish_year", false, parseInt));;
@@ -36,7 +36,7 @@ export default function searchReducer(state = initialState, { type, payload }) {
         sort:2,
         books: dateFille,
         current_page:0,
-        current_books:dateFille.slice(0,15)
+        current_books:dateFille.slice(0,20)
       };
     case RESULT_FILTER_NAME:
       let nameFilter = state.books.sort(sort_by("title", false, (a) =>  a.toUpperCase()));
@@ -46,19 +46,19 @@ export default function searchReducer(state = initialState, { type, payload }) {
         sort:1,
         books: nameFilter,
         current_page:0,
-        current_books:nameFilter.slice(0,15)
+        current_books:nameFilter.slice(0,20)
       };
     case SET_PAGE:
       return {
         ...state,
-        pages: Math.floor(payload / 15),
+        pages: Math.floor(payload / 20),
       };
     case TURN_PAGE:
       if (payload >= 0 && payload <= state.pages) {
         return {
           ...state,
           current_page:payload,
-          current_books:state.books.slice(payload*15,payload*15+15)
+          current_books:state.books.slice(payload*20,payload*20+20)
         };
       } else {
         return state;
@@ -68,7 +68,7 @@ export default function searchReducer(state = initialState, { type, payload }) {
         return {
           ...state,
           current_page:payload,
-          current_books:state.books.slice(payload*15,payload*15+15)
+          current_books:state.books.slice(payload*20,payload*20+20)
         };
     default:
       return state;

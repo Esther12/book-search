@@ -1,16 +1,19 @@
 import React from "react";
 
 const BookCard = (props) => {
+  console.log(props.k)
   return (
-    <div>
-      <div>
+    <div  key={props.k} className="card">
+      <div className="card-img">
         <img alt={props.title} src={props.src}/>
       </div>
-      <div>
-        <p>{props.title}</p>
-        <p>{props.author}</p>
-        <p>{props.publish}</p>
+      <div className="card-info">
+        <div title={props.title} className="card-title">{props.title}</div>
+        
+        <p className="card-auth">By {props.author}</p>
+        <p className="card-date">First published at {props.publish}</p>
       </div>
+      
     </div>
   );
 };

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/book-search/static/css/main.9e6868ba.css",
-    "main.js": "/book-search/static/js/main.26c55eb7.js",
+    "main.css": "/book-search/static/css/main.4d462c30.css",
+    "main.js": "/book-search/static/js/main.7e9f0304.js",
     "static/media/material-icons-two-tone.woff": "/book-search/static/media/material-icons-two-tone.04411cba9583fb0df01f.woff",
     "static/media/material-icons-two-tone.woff2": "/book-search/static/media/material-icons-two-tone.a70ec3e73fd410cdb178.woff2",
     "static/media/material-icons-round.woff": "/book-search/static/media/material-icons-round.6289913a298e816100f5.woff",
@@ -14,11 +14,11 @@
     "static/media/material-icons.woff2": "/book-search/static/media/material-icons.6c307c85ae675678f41e.woff2",
     "static/media/loading.svg": "/book-search/static/media/loading.b0c659dc5e75fe07e0b8f6db20239a61.svg",
     "index.html": "/book-search/index.html",
-    "main.9e6868ba.css.map": "/book-search/static/css/main.9e6868ba.css.map",
-    "main.26c55eb7.js.map": "/book-search/static/js/main.26c55eb7.js.map"
+    "main.4d462c30.css.map": "/book-search/static/css/main.4d462c30.css.map",
+    "main.7e9f0304.js.map": "/book-search/static/js/main.7e9f0304.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e6868ba.css",
-    "static/js/main.26c55eb7.js"
+    "static/css/main.4d462c30.css",
+    "static/js/main.7e9f0304.js"
   ]
 }

@@ -1,5 +1,6 @@
 {
   "name": "book-search",
+  "homepage": "https://esther12.github.io/book-search/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -55,4 +55,4 @@ Like in this project, if I allow the user filler book title or date ASC, I need 
 ```
 I was check it's official documents carefully, and I find they have a field query for apis to query the field they want. I only get what I needed the most. With the end xxx.json? all the api will return me the JSON formate data, which is the most easiest way to manipulate.
 
-## gitpage link https://esther12.github.io/book-search/
+## gh-pages link https://esther12.github.io/book-search/

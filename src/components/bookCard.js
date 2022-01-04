@@ -1,9 +1,8 @@
 import React from "react";
 
 const BookCard = (props) => {
-  console.log(props.k)
   return (
-    <div  key={props.k} className="card">
+    <div data-test="BookCard" className="card">
       <div className="card-img">
         <img alt={props.title} src={props.src}/>
       </div>

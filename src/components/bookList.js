@@ -10,7 +10,7 @@ const BookList = () => {
   const display = () => {
     if (searchInfo.current_books.length > 1) {
       return searchInfo.current_books.map((a, key) => {
-        return <BookCard k={key} title={a.title} publish={a.first_publish_year} src={"https://covers.openlibrary.org/b/id/" + a.cover_i + "-L.jpg"} author={a.author_name[0]} />;
+        return <BookCard key={key} title={a.title} publish={a.first_publish_year} src={"https://covers.openlibrary.org/b/id/" + a.cover_i + "-L.jpg"} author={a.author_name[0]} />;
       });
     }
   };
@@ -37,7 +37,7 @@ const BookList = () => {
     dispatch(sortResult(searchInfo.current_page, "name"));
   };
   return (
-    <div className="box-container">
+    <div className="box-container" data-test="BookList">
       <div className="box-btn-group">
         <button className={`box-btn ${searchInfo.sort === 1 ? "selected" : ""}`} onClick={sortName}>
           Sort by name

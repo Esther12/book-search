@@ -12,6 +12,7 @@ describe("get search result action", ()=>{
   beforeEach(()=>{
     moxios.install();
   });
+  console.log("error")
   afterEach(()=>{
     moxios.uninstall();
   });

@@ -2,7 +2,6 @@ import { applyMiddleware, createStore } from "redux";
 import rootReducer from "../reducers/index";
 import { middleware } from "../store";
 import moxios from 'moxios';
-import { searchResult } from "../actions/searchAction";
 import { searchBook } from "../services/api";
 const testStore = data => {
   const createTestStore = applyMiddleware(...middleware)(createStore);
@@ -16,7 +15,7 @@ describe("get search result action", ()=>{
   afterEach(()=>{
     moxios.uninstall();
   });
-  test("store is updated correctly", ()=>{
+  test("store is updated correctly",async ()=>{
     const expectedState =[{
       title:"title", 
       author:"author",
@@ -37,14 +36,15 @@ describe("get search result action", ()=>{
       isbn:3
     }];
     const store = testStore();
-
-    moxios.wait(function(){
-      const request = moxios.requests.mostRecent();
-      request.respondWith({
-        status:200, 
-        response:expectedState
+    let request = moxios.requests.at(1);
+    if(request){
+      await moxios.wait(function(){
+        request.respondWith({
+          status:200, 
+          response:expectedState
+        })
       })
-    });
+    }
     return store.dispatch(searchBook("The Great Gatsby")).then(()=>{
       const newState = store.getState();
       expect(newState.searchReducer.search).toEqual("The Great Gatsby")

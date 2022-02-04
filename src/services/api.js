@@ -3,7 +3,6 @@ import axios from "./axios";
 
 export const searchBook = data => async dispatch => {
   try {
-    console.log(process.env);
     dispatch(searchContent(data));
     const query = data.split(" ").join("+");
     const result = await axios.get(`search.json?title=${query}&limit=1&jscmd=data&fields=title,publish_date,cover_i,cover,author_name`);

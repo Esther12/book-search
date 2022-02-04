@@ -19,7 +19,6 @@ export default function searchReducer(state = initialState, { type, payload }) {
         loading: true,
       };
       case SET_RESULT:
-        console.log(payload,"payload")
       return {
         ...state,
         loading: false,

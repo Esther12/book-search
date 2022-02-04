@@ -8,7 +8,6 @@ const SearchBox = () => {
   const dispatch = useDispatch();
   const search = async(event)=>{
     event.preventDefault();
-    console.log(searchContent, "searchContent");
     if(searchContent.trim()){
       dispatch(searchBook(searchContent))
     }else{
